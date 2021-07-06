@@ -1,0 +1,36 @@
+-- 建立连接
+psql -U postgres -h localhost -p 5432 -d postgres
+
+-- 查看当前所有的数据库
+\l
+
+-- 查看表结构
+\d
+\dt
+\di
+\ds
+\df
+-- 列出所有的schema
+\dn
+-- 显示所有的表空间
+\db
+-- 列出数据库中的所有角色或用户
+\dg
+\du
+
+-- 显示表的权限分配情况
+\dp
+
+-- 连接至某一数据库
+\c test_db
+-- 查看当前用户
+\c
+
+-- 帮助命令
+\h
+
+-- 显示执行SQL语句的时间
+\timing
+
+\set AUTOCOMMIT off
+\set :AUTOCOMMIT

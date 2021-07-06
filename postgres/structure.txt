@@ -1,0 +1,21 @@
+bootstrap: 用于支持 bootstrap 运行模式
+main: 主程序模块，它负责将控制权转到 Postmaster 进程或 Postgres 进程
+postmaster: 监听用户请求的守护进程，并控制 postgres 进程的启动和终止
+libpq: c/c++ 的库函数，处理与客户端间的通信，几乎所有模块都依赖它
+tcop: postgres 服务进程的主要处理部分，它调用 parser, optimizer, executor 和 commands 中的函数
+		来执行客户端提交的查询
+parser: 编译器，将 SQL 查询树转化为内部查询树
+optimizer: 优化器，根据查询树创建最优的查询路径和查询计划
+executor: 执行器，执行来自 optimizer 的查询计划
+commands: 执行非计划查询的 SQL 命令，如创建表命令等
+catlog: 系统表操作，包含用于操作系统表的专用函数
+storage: 管理各种类型的存储系统
+access: 提供各种存取方法，支持堆，索引等对数据的存取
+nodes: 定义系统内部所用到的节点，链表等结构，以及处理这些结构的函数
+utils: 各种支持函数，如错误报告，各种初始化操作等
+regex: 正则表达式库及相关函数
+rewrite： 查询重写，根据规则系统对查询进行重写
+initdb: 初始化数据库集簇
+tsearch: 全文检索
+psql： 数据库交互工具
+port： 平台兼容性处理相关的函数
